@@ -208,70 +208,47 @@
   </div>
 </header>
 
-<section class="container">
-  <!-- Contract for Buying MemeCoin -->
-  <section class="contract">
-    <h2>Purchase Contract</h2>
-    <p>Use the contract below to buy MemeCoin:</p>
-    <pre id="contractAddress">0x1234567890abcdef1234567890abcdef12345678</pre>
-    <button class="copy-btn" onclick="copyContract()">Copy</button>
-  </section>
-</section>
-
-<script>
-  function copyContract() {
-    var contractAddress = document.getElementById("contractAddress").textContent;
-    navigator.clipboard.writeText(contractAddress).then(function() {
-      alert("Contract address copied to clipboard!");
-    }, function(err) {
-      alert("Failed to copy contract address: ", err);
-    });
-  }
-</script>
-
 <style>
-  /* Стилі для кнопки Copy */
-  .copy-btn {
-    background-color: #00ff99; /* зелений колір */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 15px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+  /* Загальний фон та шрифт */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9; /* Світло-сірий фон */
+    color: #333; /* Темно-сірий текст для контрасту */
+    margin: 0;
+    padding: 0;
   }
 
-  .copy-btn:hover {
-    background-color: #009966; /* затемненіший зелений колір */
-    transform: scale(1.05);
+  /* Стилі для контейнера */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
   }
 
-  .copy-btn:active {
-    transform: scale(1);
-  }
-
+  /* Стилі для контрактного блоку */
   .contract {
-    background-color: #fff;
+    background-color: #ffffff; /* Білий фон для блоку */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin-top: 30px;
   }
 
   .contract h2 {
-    font-size: 2em;
-    color: #333;
+    font-size: 2.5em;
+    color: #00ff99; /* Зелений колір для заголовка */
+    margin-bottom: 10px;
   }
 
   .contract p {
     font-size: 1.2em;
-    color: #666;
+    color: #666; /* Світло-сірий колір для параграфів */
   }
 
+  /* Стилі для контрактної адреси */
   pre {
-    background-color: #f1f1f1;
+    background-color: #f1f1f1; /* Світло-сірий фон для pre */
     padding: 15px;
     border-radius: 5px;
     font-family: monospace;
@@ -279,8 +256,13 @@
     white-space: pre-wrap;
     color: #333;
     font-size: 1.2em;
+    margin-top: 15px;
   }
-</style>
+
+  /* Кнопка Copy */
+  .copy-btn {
+   
+
 
 
   <!-- TikTok Video Embed -->
