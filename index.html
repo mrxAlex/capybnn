@@ -213,8 +213,22 @@
   <section class="contract">
     <h2>Purchase Contract</h2>
     <p>Use the contract below to buy MemeCoin:</p>
-    <pre>0x1234567890abcdef1234567890abcdef12345678</pre>
+    <pre id="contractAddress">0x1234567890abcdef1234567890abcdef12345678</pre>
+    <button onclick="copyContract()">Copy</button>
   </section>
+</section>
+
+<script>
+  function copyContract() {
+    var contractAddress = document.getElementById("contractAddress").textContent;
+    navigator.clipboard.writeText(contractAddress).then(function() {
+      alert("Contract address copied to clipboard!");
+    }, function(err) {
+      alert("Failed to copy contract address: ", err);
+    });
+  }
+</script>
+
 
   <!-- TikTok Video Embed -->
   <div class="tiktok-embed">
