@@ -214,7 +214,7 @@
     <h2>Purchase Contract</h2>
     <p>Use the contract below to buy MemeCoin:</p>
     <pre id="contractAddress">0x1234567890abcdef1234567890abcdef12345678</pre>
-    <button onclick="copyContract()">Copy</button>
+    <button class="copy-btn" onclick="copyContract()">Copy</button>
   </section>
 </section>
 
@@ -228,6 +228,59 @@
     });
   }
 </script>
+
+<style>
+  /* Стилі для кнопки Copy */
+  .copy-btn {
+    background-color: #00ff99; /* зелений колір */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .copy-btn:hover {
+    background-color: #009966; /* затемненіший зелений колір */
+    transform: scale(1.05);
+  }
+
+  .copy-btn:active {
+    transform: scale(1);
+  }
+
+  .contract {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .contract h2 {
+    font-size: 2em;
+    color: #333;
+  }
+
+  .contract p {
+    font-size: 1.2em;
+    color: #666;
+  }
+
+  pre {
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: monospace;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    color: #333;
+    font-size: 1.2em;
+  }
+</style>
 
 
   <!-- TikTok Video Embed -->
